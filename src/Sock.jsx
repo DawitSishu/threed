@@ -4,7 +4,6 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import "./App.css";
 import styled from "styled-components";
 
-
 const StyledCanvas = styled(Canvas)`
   /* Add your custom styles here */
 
@@ -42,6 +41,13 @@ const Sock = ({ isMobile }) => {
 
 const SockCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [details, setDetails] = useState({
+    brand: "sock1",
+    category: "BAG",
+    name: "Vss",
+    price: "BR6,882.00",
+    deliveryTime: "DELIVERY WITHIN 4 WEEKS",
+  });
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -69,17 +75,15 @@ const SockCanvas = () => {
       <div className="container">
         <div className="details">
           <div>
-            <a href="#">SPLY</a>
-
-            <a href="#">BAG</a>
+            <a href="#">{details.brand}</a>
+            <a href="#">{details.category}</a>
           </div>
           <div>
-            <a href="#">VULTURES</a>
-
-            <a href="#">BR6,882.00</a>
+            <a href="#">{details.name}</a>
+            <a href="#">{details.price}</a>
           </div>
 
-          <p className="paragraph">DELIVERY WITH IN 4 WEEKS</p>
+          <p className="paragraph">{details.deliveryTime}</p>
         </div>
 
         <StyledCanvas
