@@ -1,15 +1,14 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import './App.css'
-
+import "./App.css";
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./some/pants.gltf");
 
   return (
     <mesh>
-      <hemisphereLight intensity={2.5} groundColor='black' />
+      <hemisphereLight intensity={2.5} groundColor="black" />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -23,7 +22,7 @@ const Computers = ({ isMobile }) => {
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.6}
         position={isMobile ? [0, -3.5, -2.2] : [0, -3.25, 0]}
-        rotation={[0, 5, 0]} // Adjust these values to change rotation
+        rotation={[0, 5, 0]}
       />
     </mesh>
   );
@@ -55,16 +54,31 @@ const ComputersCanvas = () => {
 
   return (
     <div className="container">
+      <div className="details">
+        <a href="#">SPLY</a>
+        <span className="exponent">
+          <sup>
+            <a href="#">BAG</a>
+          </sup>
+        </span>{" "}
+    
+        <a href="#">VULTURES</a>
+        <span className="exponent">
+          <sup>
+            <a href="#">BR6,882.00</a>
+          </sup>
+        </span>
+        <p className="paragraph">DELIVERY WITH IN 4 WEEKS</p>
+      </div>
 
-    <Canvas
-      frameloop='demand'
-      shadows
-      dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      
-      <OrbitControls
+      <Canvas
+        frameloop="demand"
+        shadows
+        dpr={[1, 2]}
+        camera={{ position: [20, 3, 5], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true }}
+      >
+        <OrbitControls
           // autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
@@ -72,8 +86,9 @@ const ComputersCanvas = () => {
         />
         <Computers isMobile={isMobile} />
 
-      <Preload all />
-    </Canvas>
+        <Preload all />
+      </Canvas>
+
     </div>
   );
 };

@@ -1,9 +1,41 @@
+body {
+  background-color: #f1f0ea;
+}
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(255, 255, 255);
+
   
+}
+.exponent {
+  margin-left: 10px;
+}
+a {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  letter-spacing: -1px;
+  font-family: 'ocr-b-std', sans-serif;
+}
+.paragraph {
+  font-size: 14px;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-family: 'ocr-b-std', sans-serif;
+}
+.details {
+  padding: 5%;
+  height: fit-content;
+  background-color: aquamarine;
+}
+.computer {
+  display: none;
 }
