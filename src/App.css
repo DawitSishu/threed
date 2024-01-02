@@ -15,7 +15,8 @@ a {
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
-
+  text-decoration: none;
+  color: black;
   letter-spacing: -1px;
   font-family: 'ocr-b-std', sans-serif;
 }
@@ -31,7 +32,7 @@ a {
 .details {
   padding-left: 5%;
   height: fit-content;
-  background-color: aquamarine;
+ 
 }
 .computer {
   display: none;
