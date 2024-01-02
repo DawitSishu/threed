@@ -1,4 +1,4 @@
-import ComputersCanvas from "./x";
+import ComputersCanvas from "./pants";
 
 function App() {
   return (

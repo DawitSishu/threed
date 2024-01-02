@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import './App.css'
 
 
 const Computers = ({ isMobile }) => {
@@ -20,10 +21,9 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={4} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3.5, -2.2] : [0, -10.25, -1.5]}
-        rotation-y={0}
-        // rotation={[0, 0, 0]} // Adjust these values to change rotation
+        scale={isMobile ? 0.7 : 0.6}
+        position={isMobile ? [0, -3.5, -2.2] : [0, -3.25, 0]}
+        rotation={[0, 5, 0]} // Adjust these values to change rotation
       />
     </mesh>
   );
@@ -54,6 +54,8 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
+    <div className="container">
+
     <Canvas
       frameloop='demand'
       shadows
@@ -63,7 +65,7 @@ const ComputersCanvas = () => {
     >
       
       <OrbitControls
-          autoRotate
+          // autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
@@ -72,6 +74,7 @@ const ComputersCanvas = () => {
 
       <Preload all />
     </Canvas>
+    </div>
   );
 };
 
