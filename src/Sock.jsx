@@ -4,7 +4,6 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import "./App.css";
 import styled from "styled-components";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const StyledCanvas = styled(Canvas)`
   /* Add your custom styles here */
@@ -41,7 +40,7 @@ const Sock = ({ isMobile }) => {
   );
 };
 
-const ComputersCanvas = () => {
+const SockCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -105,4 +104,4 @@ const ComputersCanvas = () => {
   );
 };
 
-export default sockCanvas;
+export default SockCanvas;

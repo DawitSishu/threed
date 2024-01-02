@@ -1,13 +1,13 @@
 import ComputersCanvas from "./pants";
-import shirtCanvas from "./Shirt";
-import sockCanvas from "./Sock";
+import ShirtCanvas from "./Shirt";
+import SockCanvas from "./Sock";
 
 function App() {
   return (
     <>
-    <sockCanvas />
+    <SockCanvas />
       <ComputersCanvas />
-      <shirtCanvas />
+      <ShirtCanvas />
     </>
   );
 }

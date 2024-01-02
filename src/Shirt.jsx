@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import "./App.css";
 import styled from "styled-components";
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 const StyledCanvas = styled(Canvas)`
   /* Add your custom styles here */
@@ -41,7 +41,7 @@ const Shirt = ({ isMobile }) => {
     );
   };
 
-const ComputersCanvas = () => {
+const ShirtCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -105,4 +105,4 @@ const ComputersCanvas = () => {
   );
 };
 
-export default shirtCanvas;
+export default ShirtCanvas;
