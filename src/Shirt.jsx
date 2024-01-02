@@ -16,30 +16,30 @@ const StyledCanvas = styled(Canvas)`
   }
 `;
 
-const Sock = ({ isMobile }) => {
-  const computer = useGLTF("./some/Shoe.gltf");
-
-  return (
-    <mesh>
-      <hemisphereLight intensity={2.5} groundColor="black" />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
-      <pointLight intensity={4} />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 12.7 : 12.6}
-        position={isMobile ? [0, -2.5, 0] : [0, -2.25, 0]}
-        rotation={[0, 5, 0]}
-      />
-    </mesh>
-  );
-};
+const Shirt = ({ isMobile }) => {
+    const computer = useGLTF("./some/t-shirt.gltf");
+  
+    return (
+      <mesh>
+        <hemisphereLight intensity={2.5} groundColor="black" />
+        <spotLight
+          position={[-20, 50, 10]}
+          angle={0.12}
+          penumbra={1}
+          intensity={1}
+          castShadow
+          shadow-mapSize={1024}
+        />
+        <pointLight intensity={4} />
+        <primitive
+          object={computer.scene}
+          scale={isMobile ? 0.8 : 0.7}
+          position={isMobile ? [0, -10.5, 0] : [0, -9.25, 0]}
+          rotation={[0, 5, 0]}
+        />
+      </mesh>
+    );
+  };
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -96,7 +96,7 @@ const ComputersCanvas = () => {
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
           />
-          <Sock isMobile={isMobile} />
+          <Shirt isMobile={isMobile} />
 
           <Preload all />
         </StyledCanvas>
@@ -105,4 +105,4 @@ const ComputersCanvas = () => {
   );
 };
 
-export default sockCanvas;
+export default shirtCanvas;
