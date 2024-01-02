@@ -2,6 +2,17 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import "./App.css";
+import styled from "styled-components";
+
+const StyledCanvas = styled(Canvas)`
+  /* Add your custom styles here */
+
+  /* Media query */
+  @media (max-width: 507px) {
+    width: 60vw !important;
+    height: 60vh !important;
+  }
+`;
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./some/pants.gltf");
@@ -21,7 +32,7 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.6}
-        position={isMobile ? [0, -3.5, -2.2] : [0, -3.25, 0]}
+        position={isMobile ? [0, -3.5, 0] : [0, -3.25, 0]}
         rotation={[0, 5, 0]}
       />
     </mesh>
@@ -55,23 +66,21 @@ const ComputersCanvas = () => {
   return (
     <div className="container">
       <div className="details">
-        <a href="#">SPLY</a>
-        <span className="exponent">
-          <sup>
-            <a href="#">BAG</a>
-          </sup>
-        </span>{" "}
-    
-        <a href="#">VULTURES</a>
-        <span className="exponent">
-          <sup>
-            <a href="#">BR6,882.00</a>
-          </sup>
-        </span>
+        <div>
+          <a href="#">SPLY</a>
+
+          <a href="#" >BAG</a>
+        </div>
+        <div>
+          <a href="#">VULTURES</a>
+
+          <a href="#">BR6,882.00</a>
+        </div>
+
         <p className="paragraph">DELIVERY WITH IN 4 WEEKS</p>
       </div>
 
-      <Canvas
+      <StyledCanvas
         frameloop="demand"
         shadows
         dpr={[1, 2]}
@@ -87,8 +96,7 @@ const ComputersCanvas = () => {
         <Computers isMobile={isMobile} />
 
         <Preload all />
-      </Canvas>
-
+      </StyledCanvas>
     </div>
   );
 };
