@@ -84,7 +84,7 @@ const SockCanvas = () => {
           </div>
 
           <p className="paragraph">{details.deliveryTime}</p>
-        </div> */}
+        </div>
 
         <StyledCanvas
           frameloop="demand"
