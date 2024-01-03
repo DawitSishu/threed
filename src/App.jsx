@@ -1,13 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./App.css";
+import gif from "./assets/load.gif";
 
 import ShortCanvas from "./Short";
 import SleeveCanvas from "./sleeve";
 import ComputersCanvas from "./pants";
 import ShirtCanvas from "./Shirt";
 import SockCanvas from "./Sock";
+
 
 function App() {
   const [currentDetailsIndex, setCurrentDetailsIndex] = useState(0);
@@ -81,41 +83,51 @@ function App() {
           delay: 0.1, // Delay before snapping
           ease: "power1.inOut", // Easing function for snapping animation
         },
-        // You can add any other animation or actions here when the panel is triggered
       });
     });
   }, []);
 
   return (
-    <div>
-      <div className="details detailed" ref={detailsRef}>
-        <div>
-          <a href="#">{details[currentDetailsIndex].brand}</a>
-          <a href="#">{details[currentDetailsIndex].category}</a>
+    <Suspense
+      fallback={
+        <div >
+          <img src={gif}/>
+          <a href="#">SPLY</a>
         </div>
-        <div>
-          <a href="#">{details[currentDetailsIndex].name}</a>
-          <a href="#">{details[currentDetailsIndex].price}</a>
+      }
+    >
+      <div>
+        <div className="details detailed" ref={detailsRef}>
+          <div>
+            <a href="#">{details[currentDetailsIndex].brand}</a>
+            <a href="#">{details[currentDetailsIndex].category}</a>
+          </div>
+          <div>
+            <a href="#">{details[currentDetailsIndex].name}</a>
+            <a href="#">{details[currentDetailsIndex].price}</a>
+          </div>
+          <p className="paragraph">
+            {details[currentDetailsIndex].deliveryTime}
+          </p>
         </div>
-        <p className="paragraph">{details[currentDetailsIndex].deliveryTime}</p>
-      </div>
 
-      <div className="panel">
-        <SockCanvas />
+        <div className="panel">
+          <SockCanvas />
+        </div>
+        <div className="panel">
+          <ComputersCanvas />
+        </div>
+        <div className="panel">
+          <ShirtCanvas />
+        </div>
+        <div className="panel">
+          <ShortCanvas />
+        </div>
+        <div className="panel">
+          <SleeveCanvas />
+        </div>
       </div>
-      <div className="panel">
-        <ComputersCanvas />
-      </div>
-      <div className="panel">
-        <ShirtCanvas />
-      </div>
-      <div className="panel">
-        <ShortCanvas />
-      </div>
-      <div className="panel">
-        <SleeveCanvas />
-      </div>
-    </div>
+    </Suspense>
   );
 }
 
