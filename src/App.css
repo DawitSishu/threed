@@ -43,7 +43,8 @@ a {
   background-color: rgb(255, 255, 255);
   background: transparent;
   font-size: 50px;
-  top: 450px; 
+  /* top: 450px;  */
+ top: 75%;
   padding: 20px;
   z-index: 1;
 }
