@@ -70,6 +70,20 @@ function App() {
         onEnterBack: () => setCurrentDetailsIndex(index),
       });
     });
+    panels.forEach((panel, index) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: "top top", // Align the start of the panel with the top of the viewport
+        end: () => `+=${panel.offsetHeight}`, // Set the end based on panel height
+        snap: {
+          snapTo: 1, // Snap to one panel at a time
+          duration: { min: 0.1, max: 0.2 }, // Set minimum and maximum duration for snapping
+          delay: 0.1, // Delay before snapping
+          ease: "power1.inOut", // Easing function for snapping animation
+        },
+        // You can add any other animation or actions here when the panel is triggered
+      });
+    });
   }, []);
 
   return (
