@@ -31,8 +31,8 @@ const Sleeve = ({ isMobile }) => {
       <pointLight intensity={4} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 3.6 : 3.7}
-        position={isMobile ? [0, -2.5, 0] : [0, -2.25, 0]}
+        scale={isMobile ? 4.3 : 4.7}
+        position={isMobile ? [0, -3.5, 0] : [0, -4.25, 0]}
         rotation={[0, 5, 0]}
       />
     </mesh>

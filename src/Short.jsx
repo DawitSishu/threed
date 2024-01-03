@@ -24,16 +24,15 @@ const Short = ({ isMobile }) => {
         position={[-20, 50, 10]}
         angle={0.12}
         penumbra={1}
-        intensity={1}
+        intensity={0}
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={4} />
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.4 : 0.4}
-        position={isMobile ? [0, -2.5, 0] : [0, -2.25, 0]}
-        rotation={[0, 5, 0]}
+        position={isMobile ? [0, 0, 0] : [0, 0, 0]}
+        rotation={[0, 3, 0]}
       />
     </mesh>
   );
