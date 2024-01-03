@@ -1,6 +1,8 @@
 import ComputersCanvas from "./pants";
 import ShirtCanvas from "./Shirt";
 import SockCanvas from "./Sock";
+import ShortCanvas from "./Short";
+import SleeveCanvas from "./sleeve";
 
 function App() {
   
@@ -9,6 +11,9 @@ function App() {
     <SockCanvas />
       <ComputersCanvas />
       <ShirtCanvas />
+      <ShortCanvas />
+      <SleeveCanvas />
+    
     </>
   );
 }

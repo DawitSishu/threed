@@ -32,11 +32,13 @@ a {
 .details {
   padding-left: 5%;
   height: fit-content;
+  width: 20%;
  
 }
 .computer {
   display: none;
 }
+
 @media (max-width: 507px) {
  .container{
   display: flex;

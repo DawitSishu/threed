@@ -42,10 +42,10 @@ const Sock = ({ isMobile }) => {
 const SockCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [details, setDetails] = useState({
-    brand: "sock1",
-    category: "BAG",
-    name: "Vss",
-    price: "BR6,882.00",
+    brand: "SPLY",
+    category: "BAG(1)",
+    name: "YZY PODS",
+    price: "BR11, 470.00",
     deliveryTime: "DELIVERY WITHIN 4 WEEKS",
   });
 
@@ -74,11 +74,11 @@ const SockCanvas = () => {
     <>
       <div className="container">
         <div className="details">
-          <div>
+          <div className="det"> 
             <a href="#">{details.brand}</a>
             <a href="#">{details.category}</a>
           </div>
-          <div>
+          <div className="det">
             <a href="#">{details.name}</a>
             <a href="#">{details.price}</a>
           </div>
