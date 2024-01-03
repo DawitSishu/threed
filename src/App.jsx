@@ -106,7 +106,7 @@ function App() {
   return (
     <div>
       {isLoading ? (
-        <div>
+        <div style={{width:"100vw", height:"100vh"}}>
           <img src={gif} alt="Loading..." />
           <a href="#">SPLY</a>
         </div>
