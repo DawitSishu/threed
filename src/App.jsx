@@ -12,6 +12,7 @@ import SockCanvas from "./Sock";
 
 function App() {
   const [currentDetailsIndex, setCurrentDetailsIndex] = useState(0);
+  const [isLoading, setLoading] = useState(true);
 
   const details = [
     {
@@ -84,49 +85,61 @@ function App() {
         },
       });
     });
+    const timer = setTimeout(() => {
+      setLoading(false); // Set isLoading to false after 5 seconds
+    }, 4000);
+
+    return () => clearTimeout(timer);
   }, []);
+  useEffect(() => {
+    if (isLoading) {
+      // While loading, prevent scrolling on the body
+      document.body.style.overflowX = 'hidden';
+      document.body.style.overflowY = 'hidden';
+    } else {
+      // Once loading is done, allow scrolling on the body
+      document.body.style.overflowX = 'hidden';
+      document.body.style.overflowY = 'scroll';
+    }
+  }, [isLoading]);
 
   return (
-    <Suspense
-      fallback={
+    <div>
+      {isLoading ? (
         <div>
           <img src={gif} alt="Loading..." />
           <a href="#">SPLY</a>
         </div>
-      }
-    >
-      <div>
-        <div className="details detailed" ref={detailsRef}>
-          <div>
-            <a href="#">{details[currentDetailsIndex].brand}</a>
-            <a href="#">{details[currentDetailsIndex].category}</a>
-          </div>
-          <div>
-            <a href="#">{details[currentDetailsIndex].name}</a>
-            <a href="#">{details[currentDetailsIndex].price}</a>
-          </div>
-          <p className="paragraph">
-            {details[currentDetailsIndex].deliveryTime}
-          </p>
+      ) : null}
+      <div className="details detailed" ref={detailsRef}>
+        <div>
+          <a href="#">{details[currentDetailsIndex].brand}</a>
+          <a href="#">{details[currentDetailsIndex].category}</a>
         </div>
-
-        <div className="panel">
-          <SockCanvas />
+        <div>
+          <a href="#">{details[currentDetailsIndex].name}</a>
+          <a href="#">{details[currentDetailsIndex].price}</a>
         </div>
-        <div className="panel">
-          <ComputersCanvas />
-        </div>
-        <div className="panel">
-          <ShirtCanvas />
-        </div>
-        <div className="panel">
-          <ShortCanvas />
-        </div>
-        <div className="panel">
-          <SleeveCanvas />
-        </div>
+        <p className="paragraph">{details[currentDetailsIndex].deliveryTime}</p>
       </div>
-    </Suspense>
+
+      <div className="panel">
+        <SockCanvas />
+      </div>
+
+      <div className="panel">
+        <ComputersCanvas />
+      </div>
+      <div className="panel">
+        <ShirtCanvas />
+      </div>
+      <div className="panel">
+        <ShortCanvas />
+      </div>
+      <div className="panel">
+        <SleeveCanvas />
+      </div>
+    </div>
   );
 }
 
