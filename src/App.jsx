@@ -36,33 +36,9 @@ function App() {
         <SockCanvas />
       </div>
       <div className="pc container">
-      <div className="details">
-          <div>
-            <a href="#">{details.brand}</a>
-            <a href="#">{details.category}</a>
-          </div>
-          <div>
-            <a href="#">{details.name}</a>
-            <a href="#">{details.price}</a>
-          </div>
-
-          <p className="paragraph">{details.deliveryTime}</p>
-        </div>
         <ComputersCanvas />
       </div>
       <div className="shirt container">
-      <div className="details">
-          <div>
-            <a href="#">{details.brand}</a>
-            <a href="#">{details.category}</a>
-          </div>
-          <div>
-            <a href="#">{details.name}</a>
-            <a href="#">{details.price}</a>
-          </div>
-
-          <p className="paragraph">{details.deliveryTime}</p>
-        </div>
         <ShirtCanvas />
       </div>
     </>
