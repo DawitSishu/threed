@@ -1,5 +1,5 @@
 body {
-  background-color: #f1f0ea;
+  background-color: #ffffff;
   overflow-x: hidden;
 }
 .container {
@@ -40,10 +40,18 @@ a {
 
 .detailed {
   position: sticky;
-  top: 20px; /* Adjust this value as needed */
-  background-color: white;
+  background-color: rgb(255, 255, 255);
+  background: transparent;
+  font-size: 50px;
+  top: 450px; 
   padding: 20px;
   z-index: 1;
+}
+.detailed a {
+  padding: 10px;
+}
+.detailed p {
+  padding: 2px;
 }
 
 .panels-container {
@@ -62,14 +70,18 @@ a {
   display: none;
 }
 
-@media (max-width: 507px) {
+@media (max-width: 768px) {
  .container{
   display: flex;
   flex-direction: column-reverse;
  }
- .details{
+ /* .details{
   display: flex;
   flex-direction: column;
-  padding-left: 0;
- }
+  padding-left: 50%;
+ 
+  padding-top: 100%;
+  background: transparent;
+
+ } */
 }

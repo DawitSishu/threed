@@ -32,7 +32,7 @@ const Sock = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 12.7 : 12.6}
-        position={isMobile ? [0, -2.5, 0] : [0, -2.25, 0]}
+        position={isMobile ? [0, -2.5, 0] : [0, -0.25, 0]}
         rotation={[0, 5, 0]}
       />
     </mesh>
