@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'ocr-b';
+  src: url('./assets/OCRB.ttf') format('ttf'); /* Define the path to your font */
+  /* Add other font formats (e.g., woff2, ttf) for cross-browser compatibility */
+}
+
 body {
   background-color: #ffffff;
   overflow-x: hidden;
+  font-family: 'ocr-b', sans-serif;
 }
 
 .container {
@@ -19,7 +26,7 @@ a {
   text-decoration: none;
   color: black;
   letter-spacing: -1px;
-  font-family: "ocr-b-std", sans-serif;
+  font-family: "ocr-b", sans-serif;
 }
 .paragraph {
   font-size: 14px;

@@ -14,43 +14,29 @@ import WhitePant from "./whitePant";
 import WhiteShort from "./WhiteShort";
 const detail = [
   {
-    brand: "sock1",
-    category: "BAG",
-    name: "Vss",
-    price: "BR6,882.00",
+    name: "YZY PODS BR11,479.00",
     deliveryTime: "DELIVERY WITHIN 4 WEEKS",
-    iswhite: false,
+    size: "SIZE 1 2 3 \nSIZE GUIDE",
   },
   {
-    brand: "sock2",
-    category: "BAG",
-    name: "Vss",
-    price: "BR6,882.00",
-    deliveryTime: "DELIVERY WITHIN 4 WEEKS",
+    name: "VULTURES PANTS BR6,888.00",
     iswhite: false,
+    size: "SIZE 1 2 3 \nSIZE GUIDE",
   },
   {
-    brand: "sock3",
-    category: "BAG",
-    name: "Vss",
-    price: "BR6,882.00",
-    deliveryTime: "DELIVERY WITHIN 4 WEEKS",
+    name: "LONG T BR5,740.00",
     iswhite: false,
+    size: "SIZE 1 2 3 \nSIZE GUIDE",
   },
   {
-    brand: "sock4",
-    category: "BAG",
-    name: "Vss",
-    price: "BR6,882.00",
-    deliveryTime: "DELIVERY WITHIN 4 WEEKS",
+    name: "VULTURES SHORTS BR5,740.00",
     iswhite: false,
+    size: "SIZE 1 2 3 \nSIZE GUIDE",
   },
   {
-    brand: "sock5",
-    category: "BAG",
-    name: "Vss",
-    price: "BR6,882.00",
-    deliveryTime: "DELIVERY WITHIN 4 WEEKS",
+    name: "BOX T BR4,592.00",
+    size: "SIZE 1 2 3 \nSIZE GUIDE",
+    iswhite: true,
   },
 ];
 
@@ -59,7 +45,7 @@ function App() {
   const [isLoading, setLoading] = useState(true);
   const [details, setDetails] = useState(detail);
   const [canvasIndex, setCanvasIndex] = useState(-1);
-
+  // 2func
   const handleToggleMode = () => {
     console.log(currentDetailsIndex);
     setDetails((prevDetails) => {
@@ -121,29 +107,65 @@ function App() {
       ) : null} */}
       <div className="details detailed" ref={detailsRef}>
         <div>
-          <a href="#">{details[currentDetailsIndex].brand}</a>
-          <a href="#">{details[currentDetailsIndex].category}</a>
+          <a href="#">SPLY BAG (1)</a>
         </div>
         <div>
           <a href="#">{details[currentDetailsIndex].name}</a>
-          <a href="#">{details[currentDetailsIndex].price}</a>
         </div>
-        <p className="paragraph">{details[currentDetailsIndex].deliveryTime}</p>
+
+        {details[currentDetailsIndex].iswhite != null ? (
+          <div>
+            <a
+              style={{
+                color: `${
+                  !details[currentDetailsIndex].iswhite ? "black" : "grey"
+                }`,
+                cursor: "pointer",
+              }}
+              onClick={
+                details[currentDetailsIndex].iswhite ? handleToggleMode : null
+              }
+            >
+              BLACK
+            </a>
+            <a
+              style={{
+                color: `${
+                  details[currentDetailsIndex].iswhite ? "black" : "grey"
+                }`,
+                cursor: "pointer",
+              }}
+              onClick={
+                !details[currentDetailsIndex].iswhite ? handleToggleMode : null
+              }
+            >
+              WHITE
+            </a>
+          </div>
+        ) : null}
+        {details[currentDetailsIndex].deliveryTime != null ? (
+          <div>
+            <a href="#">{details[currentDetailsIndex].deliveryTime}</a>
+          </div>
+        ) : null}
+        <div>
+          <a href="#">{details[currentDetailsIndex].size}</a>
+        </div>
+        <a href="#">ORDER</a>
       </div>
 
       <div className="panel">
         <SockCanvas />
       </div>
-      <div className="panel" onClick={handleToggleMode}>
+      <div className="panel">
         {details[1].iswhite ? <ComputersCanvas /> : <WhitePant />}
       </div>
 
-      {/* current index xolor checked */}
-      <div className="panel" onClick={handleToggleMode}>
+      <div className="panel">
         {details[2].iswhite ? <WhiteSleeve /> : <SleeveCanvas />}
       </div>
 
-      <div className="panel" onClick={handleToggleMode}>
+      <div className="panel">
         {details[3].iswhite ? <WhiteShort /> : <ShortCanvas />}
       </div>
 
