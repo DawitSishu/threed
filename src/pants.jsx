@@ -73,7 +73,7 @@ const ComputersCanvas = () => {
   return (
     <>
       <div className="container">
-        <div className="details">
+        {/* <div className="details">
           <div>
             <a href="#">SPLY</a>
 
@@ -86,7 +86,7 @@ const ComputersCanvas = () => {
           </div>
 
           <p className="paragraph">DELIVERY WITH IN 4 WEEKS</p>
-        </div>
+        </div> */}
 
         <StyledCanvas
           frameloop="demand"

@@ -75,7 +75,7 @@ const ShirtCanvas = () => {
   return (
     <>
       <div className="container">
-      <div className="details">
+      {/* <div className="details">
           <div>
             <a href="#">{details.brand}</a>
             <a href="#">{details.category}</a>
@@ -86,7 +86,7 @@ const ShirtCanvas = () => {
           </div>
 
           <p className="paragraph">{details.deliveryTime}</p>
-        </div>
+        </div> */}
 
         <StyledCanvas
           frameloop="demand"
