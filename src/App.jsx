@@ -10,7 +10,6 @@ import ComputersCanvas from "./pants";
 import ShirtCanvas from "./Shirt";
 import SockCanvas from "./Sock";
 
-
 function App() {
   const [currentDetailsIndex, setCurrentDetailsIndex] = useState(0);
 
@@ -89,14 +88,13 @@ function App() {
 
   return (
     <Suspense
-    fallback={
-      <div>
-        <img src={gif} alt="Loading..." />
-        <a href="#">SPLY</a>
-      </div>
-    }
-  >
-
+      fallback={
+        <div>
+          <img src={gif} alt="Loading..." />
+          <a href="#">SPLY</a>
+        </div>
+      }
+    >
       <div>
         <div className="details detailed" ref={detailsRef}>
           <div>
@@ -128,7 +126,7 @@ function App() {
           <SleeveCanvas />
         </div>
       </div>
-  </Suspense>
+    </Suspense>
   );
 }
 
