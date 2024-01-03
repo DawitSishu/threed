@@ -10,29 +10,56 @@ import "./App.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function App() {
-  const details = {
+  const details = [{
     brand: "sock1",
     category: "BAG",
     name: "Vss",
     price: "BR6,882.00",
     deliveryTime: "DELIVERY WITHIN 4 WEEKS",
-  };
+  },
+  {
+    brand: "sock2",
+    category: "BAG",
+    name: "Vss",
+    price: "BR6,882.00",
+    deliveryTime: "DELIVERY WITHIN 4 WEEKS",
+  },
+  {
+    brand: "sock3",
+    category: "BAG",
+    name: "Vss",
+    price: "BR6,882.00",
+    deliveryTime: "DELIVERY WITHIN 4 WEEKS",
+  },{
+    brand: "sock4",
+    category: "BAG",
+    name: "Vss",
+    price: "BR6,882.00",
+    deliveryTime: "DELIVERY WITHIN 4 WEEKS",
+  },{
+    brand: "sock5",
+    category: "BAG",
+    name: "Vss",
+    price: "BR6,882.00",
+    deliveryTime: "DELIVERY WITHIN 4 WEEKS",
+  }];
   const detailsRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+   
   }, []);
   return (
     <div >
-      <div className="details" ref={detailsRef}>
+      <div className="details detailed" ref={detailsRef}>
         <div>
-          <a href="#">{details.brand}</a>
-          <a href="#">{details.category}</a>
+          <a href="#">{details[0].brand}</a>
+          <a href="#">{details[0].category}</a>
         </div>
         <div>
-          <a href="#">{details.name}</a>
-          <a href="#">{details.price}</a>
+          <a href="#">{details[0].name}</a>
+          <a href="#">{details[0].price}</a>
         </div>
 
         <p className="paragraph">{details.deliveryTime}</p>

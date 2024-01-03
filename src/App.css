@@ -33,7 +33,30 @@ a {
   padding-left: 5%;
   height: fit-content;
   width: 20%;
- 
+}
+.app-container {
+  position: relative;
+}
+
+.detailed {
+  position: sticky;
+  top: 20px; /* Adjust this value as needed */
+  background-color: white;
+  padding: 20px;
+  z-index: 1;
+}
+
+.panels-container {
+  /* Add styles for the container holding the panels */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.panel {
+  /* Add styles for each panel */
+  flex: 1 0 50%; /* Adjust these values as needed */
+  padding: 20px;
+  box-sizing: border-box;
 }
 .computer {
   display: none;
