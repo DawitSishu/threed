@@ -9,8 +9,11 @@ const StyledCanvas = styled(Canvas)`
 
   /* Media query */
   @media (max-width: 507px) {
-    width: 60vw !important;
+    width: 80vw !important;
     height: 60vh !important;
+    // background-color: red;
+    bottom: 40%;
+
   }
 `;
 
@@ -28,11 +31,11 @@ const Sock = ({ isMobile }) => {
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={4} />
+
       <primitive
         object={computer.scene}
-        scale={isMobile ? 12.7 : 12.6}
-        position={isMobile ? [0, -2.5, 0] : [0, -0.25, 0]}
+        scale={isMobile ? 15.7 : 12.6}
+        position={isMobile ? [0, -2, 0] : [0, -0.25, 0]}
         rotation={[0, 5, 0]}
       />
     </mesh>
