@@ -13,6 +13,8 @@ const StyledCanvas = styled(Canvas)`
   @media (max-width: 507px) {
     width: 60vw !important;
     height: 60vh !important;
+    margin-right: 13%;
+    margin-top: -37%;
   }
 `;
 
@@ -34,7 +36,7 @@ const Shirt = ({ isMobile }) => {
         <primitive
           object={computer.scene}
           scale={isMobile ? 0.8 : 0.7}
-          position={isMobile ? [0, -10.5, 0] : [0, -9.25, 0]}
+          position={isMobile ? [0, -9.8, 0] : [0, -9.25, 0]}
           rotation={[0, 5, 0]}
         />
       </mesh>
