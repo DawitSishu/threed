@@ -108,7 +108,7 @@ function App() {
   }, [isLoading]);
 
   return (
-    <div>
+    <div className="con">
       {isLoading ? (
         <div style={{ width: "100vw", height: "100vh" }}>
           <img src={gif} alt="Loading..." />
@@ -164,7 +164,7 @@ function App() {
         <a href="#">ORDER</a>
       </div>
 
-      <div className="panel">
+      <div className="panel first">
         <SockCanvas />
       </div>
       <div className="panel">

@@ -84,6 +84,21 @@ a {
     display: flex;
     flex-direction: column-reverse;
   }
+  /* .con {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  } */
+  /* .first {
+    margin: 50px;
+ 
+    background-color: red;
+    height: 100vh;
+    margin-top: -400px;
+
+  } */
   .detailed {
     top: 56%;
     background-color: rgb(255, 255, 255);
