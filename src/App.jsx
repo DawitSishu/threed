@@ -121,7 +121,7 @@ function App() {
         <a href="#">{details[currentDetailsIndex].name}</a>
 
         {details[currentDetailsIndex].iswhite != null ? (
-          <>           
+          <p>           
             <p
               style={{
                 color: `${
@@ -150,7 +150,7 @@ function App() {
             >
               WHITE
             </p>
-          </>
+          </p>
         ) : null}
 
         {details[currentDetailsIndex].deliveryTime != null ? (
