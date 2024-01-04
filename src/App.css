@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 @font-face {
   font-family: "ocr-b";
   src: url("./assets/OCRB.ttf") format("ttf"); /* Define the path to your font */
@@ -51,15 +55,14 @@ a {
   background-color: rgb(255, 255, 255);
   background: transparent;
   font-size: 50px;
-  /* top: 450px;  */
-  /* top: 70%; */
-
-}
-.panels-container {
-  /* Add styles for the container holding the panels */
+  top: 450px;  
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 17px;
+  top: 70%;
+  margin-left: 5%;
 }
+
 
 .panel {
   /* Add styles for each panel */
@@ -100,11 +103,17 @@ a {
   }
 
   .detailed {
-    top: 50%;
-    /* background-color: rgb(133, 128, 128); */
+    
+    top: 70%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+    position: sticky;
+     /* background-color: rgb(133, 128, 128); */
     width: 100%;
     margin-bottom: 15%;
     margin-left: 10%;
+    
     
     background: transparent;
   }
@@ -118,9 +127,31 @@ a {
 
  } */
 }
-.whiter {
+/* .whiter {
   padding: 15px;
-}
+} */
 .size a {
   letter-spacing: 3px;
+}
+.linkes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.linkes2 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  background-color: red;
+
+}
+.linkesd {
+  display: none;
+}
+.cdd {
+  display: flex;
+  column-gap: 15px;
+}
+.cdd p {
+  font-size: 14px;
 }

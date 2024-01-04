@@ -88,7 +88,7 @@ function App() {
     //     },
     //   });
     // });
-    
+
     const timer = setTimeout(() => {
       setLoading(false); // Set isLoading to false after 5 seconds
     }, 4000);
@@ -116,51 +116,50 @@ function App() {
         </div>
       ) : null}
       <div className="details detailed" ref={detailsRef}>
-        <div>
-          <a href="#">SPLY BAG (1)</a>
-        </div>
-        <div>
-          <a href="#">{details[currentDetailsIndex].name}</a>
-        </div>
+        <a href="#">SPLY BAG (1)</a>
+
+        <a href="#">{details[currentDetailsIndex].name}</a>
 
         {details[currentDetailsIndex].iswhite != null ? (
-          <div className="color">
-            <a
+          <p className="cdd">
+           
+            <p
               style={{
                 color: `${
                   !details[currentDetailsIndex].iswhite ? "black" : "grey"
                 }`,
                 cursor: "pointer",
+                verticalAlign: "middle", // Add this line
               }}
               onClick={
                 details[currentDetailsIndex].iswhite ? handleToggleMode : null
               }
             >
               BLACK
-            </a>
-            <a className="whiter"
+            </p>
+            <p
               style={{
                 color: `${
                   details[currentDetailsIndex].iswhite ? "black" : "grey"
                 }`,
                 cursor: "pointer",
+                verticalAlign: "middle", // Add this line
               }}
               onClick={
                 !details[currentDetailsIndex].iswhite ? handleToggleMode : null
               }
             >
               WHITE
-            </a>
-          </div>
+            </p>
+          </p>
         ) : null}
+
         {details[currentDetailsIndex].deliveryTime != null ? (
-          <div>
-            <a href="#">{details[currentDetailsIndex].deliveryTime}</a>
-          </div>
+          <a href="#">{details[currentDetailsIndex].deliveryTime}</a>
         ) : null}
-        <div className="size">
-          <a href="#">{details[currentDetailsIndex].size}</a>
-        </div>
+
+        <a href="#">{details[currentDetailsIndex].size}</a>
+
         <a href="#">ORDER</a>
       </div>
 

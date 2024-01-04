@@ -11,10 +11,9 @@ const StyledCanvas = styled(Canvas)`
   @media (max-width: 507px) {
     width: 80vw !important;
     height: 60vh !important;
-
+  
     bottom: 59%;
-    margin-top: -50%;
-    
+   
 
   }
 `;
@@ -37,7 +36,7 @@ const Sock = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 15.7 : 12.6}
-        position={isMobile ? [0, -2, 0] : [0, -0.25, 0]}
+        position={isMobile ? [0, -4, 0] : [0, -0.25, 0]}
         rotation={[0, 5.46, 0]}
       />
     </mesh>
