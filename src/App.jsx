@@ -78,7 +78,17 @@ function App() {
         onEnterBack: () => setCurrentDetailsIndex(index),
       });
     });
-
+    // panels.forEach((panel, index) => {
+    //   ScrollTrigger.create({
+    //     trigger: panel,
+    //     start: "top top",
+    //       snapTo: 1,
+    //       duration: { min: 0.1, max: 0.1 },
+    //       ease: "power1.inOut",
+    //     },
+    //   });
+    // });
+    
     const timer = setTimeout(() => {
       setLoading(false); // Set isLoading to false after 5 seconds
     }, 4000);
@@ -99,12 +109,12 @@ function App() {
 
   return (
     <div>
-      {/* {isLoading ? (
+      {isLoading ? (
         <div style={{ width: "100vw", height: "100vh" }}>
           <img src={gif} alt="Loading..." />
           <a href="#">SPLY</a>
         </div>
-      ) : null} */}
+      ) : null}
       <div className="details detailed" ref={detailsRef}>
         <div>
           <a href="#">SPLY BAG (1)</a>

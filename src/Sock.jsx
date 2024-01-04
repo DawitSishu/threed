@@ -12,7 +12,7 @@ const StyledCanvas = styled(Canvas)`
     width: 80vw !important;
     height: 60vh !important;
     // background-color: red;
-    bottom: 40%;
+    bottom: 59%;
 
   }
 `;
