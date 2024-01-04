@@ -121,8 +121,8 @@ function App() {
         <a href="#">{details[currentDetailsIndex].name}</a>
 
         {details[currentDetailsIndex].iswhite != null ? (
-          <p>           
-            <p
+          <p className = "p">       
+            <p className="par"
               style={{
                 color: `${
                   !details[currentDetailsIndex].iswhite ? "black" : "grey"
@@ -136,7 +136,7 @@ function App() {
             >
               BLACK
             </p>
-            <p
+            <p className="par"
               style={{
                 color: `${
                   details[currentDetailsIndex].iswhite ? "black" : "grey"

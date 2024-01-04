@@ -62,8 +62,14 @@ a {
   top: 70%;
   margin-left: 5%;
 }
+.par {
+  font-size: 14px;
+}
 
-
+.p {
+  display: flex;
+  column-gap: 10px;
+}
 .panel {
   /* Add styles for each panel */
   flex: 1 0 50%; /* Adjust these values as needed */
