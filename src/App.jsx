@@ -124,7 +124,7 @@ function App() {
         </div>
 
         {details[currentDetailsIndex].iswhite != null ? (
-          <div>
+          <div className="color">
             <a
               style={{
                 color: `${
@@ -138,7 +138,7 @@ function App() {
             >
               BLACK
             </a>
-            <a
+            <a className="whiter"
               style={{
                 color: `${
                   details[currentDetailsIndex].iswhite ? "black" : "grey"
@@ -158,7 +158,7 @@ function App() {
             <a href="#">{details[currentDetailsIndex].deliveryTime}</a>
           </div>
         ) : null}
-        <div>
+        <div className="size">
           <a href="#">{details[currentDetailsIndex].size}</a>
         </div>
         <a href="#">ORDER</a>
