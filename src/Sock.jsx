@@ -11,8 +11,10 @@ const StyledCanvas = styled(Canvas)`
   @media (max-width: 507px) {
     width: 80vw !important;
     height: 60vh !important;
-    // background-color: red;
+
     bottom: 59%;
+    margin-top: -50%;
+    
 
   }
 `;
