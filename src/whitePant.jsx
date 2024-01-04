@@ -16,6 +16,8 @@ const StyledCanvas = styled(Canvas)`
 
   /* Media query */
   @media (max-width: 507px) {
+   
+    margin-right: 11%;
     width: 60vw !important;
     height: 60vh !important;
   }
@@ -35,12 +37,12 @@ const Computers = ({ isMobile }) => {
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={4} />
+    
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.6}
         position={isMobile ? [0, -3.5, 0] : [0, -3.25, 0]}
-        rotation={[0, 5, 0]}
+        rotation={[0, 2, 0]}
       />
     </mesh>
   );
