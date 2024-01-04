@@ -171,7 +171,7 @@ function App() {
         {details[1].iswhite ? <ComputersCanvas /> : <WhitePant />}
       </div>
 
-      <div className="panel">
+      <div className="panel sleeve">
         {details[2].iswhite ? <WhiteSleeve /> : <SleeveCanvas />}
       </div>
 

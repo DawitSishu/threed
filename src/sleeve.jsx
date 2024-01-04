@@ -9,7 +9,11 @@ const StyledCanvas = styled(Canvas)`
 
   /* Media query */
   @media (max-width: 507px) {
-    width: 60vw !important;
+
+  
+    margin-top: -60%;
+    width: 100vw !important;
+    margin-right: 10%;
     height: 60vh !important;
   }
 `;
@@ -31,8 +35,8 @@ const Sleeve = ({ isMobile }) => {
       <pointLight intensity={4} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 4.3 : 4.7}
-        position={isMobile ? [0, -3.5, 0] : [0, -4.25, 0]}
+        scale={isMobile ? 6.9 : 4.7}
+        position={isMobile ? [0, -8.5, 0] : [0, -4.25, 0]}
         rotation={[0, 5, 0]}
       />
     </mesh>
