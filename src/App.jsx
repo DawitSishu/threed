@@ -110,8 +110,8 @@ function App() {
   return (
     <div className="con">
       {isLoading ? (
-        <div style={{ width: "100vw", height: "100vh" }}>
-          <img src={gif} alt="Loading..." />
+        <div className="imgc" style={{ width: "100vw", height: "100vh" }}>
+          <img className="img" src={gif} alt="Loading..." />
           <a href="#">SPLY</a>
         </div>
       ) : null}
