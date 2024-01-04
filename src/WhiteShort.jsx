@@ -9,8 +9,9 @@ const StyledCanvas = styled(Canvas)`
 
   /* Media query */
   @media (max-width: 507px) {
-    width: 60vw !important;
+    width: 80vw !important;
     height: 60vh !important;
+    margin-right: 13%;
   }
 `;
 
@@ -30,7 +31,7 @@ const Short = ({ isMobile }) => {
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.4 : 0.4}
+        scale={isMobile ? 0.5 : 0.4}
         position={isMobile ? [0, 0, 0] : [0, 0, 0]}
         rotation={[0, 3, 0]}
       />
